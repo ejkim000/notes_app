@@ -32,7 +32,7 @@ function addNewNote(text = '') {
     const textArea = note.querySelector("textarea");
 
     textArea.value = text;
-    main.innerHTML = text;
+    main.innerHTML = marked.parse(text); // ??
 
     deleteBtn.addEventListener("click", () => {
         note.remove();
